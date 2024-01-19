@@ -54,7 +54,7 @@ fun LoginScreen(navController: NavController, vm: MainViewModel) {
             val passState = remember { mutableStateOf(TextFieldValue()) }
 
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                painter = painterResource(id = R.drawable.logo),
                 contentDescription = null,
                 modifier = Modifier
                     .width(250.dp)
