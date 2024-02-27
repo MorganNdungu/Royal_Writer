@@ -8,11 +8,12 @@ import androidx.navigation.compose.rememberNavController
 import com.example.blogapp.presentation.MainViewModel
 import com.example.blogapp.presentation.common.NotificationMessage
 import com.example.blogapp.presentation.screens.auth.LoginScreen
-import com.example.blogapp.presentation.screens.auth.ProfileScreen
 import com.example.blogapp.presentation.screens.auth.SignupScreen
-import com.example.blogapp.presentation.screens.main.MyServicesScreen
-import com.example.blogapp.presentation.screens.main.SearchScreen
+import com.example.blogapp.presentation.screens.main.MyProfileScreen
 import com.example.blogapp.presentation.screens.main.ServiceScreen
+
+//import com.example.blogapp.presentation.screens.main.MyServicesScreen
+//import com.example.blogapp.presentation.screens.main.SearchScreen
 
 @Composable
 fun BlogApp() {
@@ -27,17 +28,22 @@ fun BlogApp() {
         composable(Routes.Login.route) {
             LoginScreen(navController = navController, vm = vm)
         }
+//        composable("blog_detail/{postId}") { backStackEntry ->
+//            val arguments = requireNotNull(backStackEntry.arguments)
+//            val postId = arguments.getString("postId")!!
+//            BlogDetailScreen(navController, postId, vm)
+//        }
         composable(Routes.Services.route) {
             ServiceScreen(navController = navController, vm = vm)
         }
-        composable(Routes.Search.route) {
-            SearchScreen(navController = navController, vm = vm)
-        }
-        composable(Routes.MyServices.route) {
-            MyServicesScreen(navController = navController, vm = vm)
-        }
+//        composable(Routes.Search.route) {
+//            SearchScreen(navController = navController, vm = vm)
+//        }
+//        composable(Routes.MyServices.route) {
+//            MyServicesScreen(navController = navController, vm = vm)
+//        }
         composable(Routes.Profile.route) {
-            ProfileScreen(navController = navController, vm = vm)
+            MyProfileScreen(navController = navController, vm = vm)
         }
 
     }

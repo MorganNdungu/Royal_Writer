@@ -32,8 +32,8 @@ import com.example.blogapp.presentation.common.navigateTo
  */
 enum class BottomNavigationItem(val icon: ImageVector, val navDestination: Routes) {
     SERVICES(Icons.Default.Home, Routes.Services),
-    SEARCH(Icons.Default.Search, Routes.Search),
-    MYSERVICES(Icons.Default.Build,Routes.MyServices),
+//    SEARCH(Icons.Default.Search, Routes.Search),
+//    MYSERVICES(Icons.Default.Build,Routes.MyServices),
     PROFILE(Icons.Default.AccountCircle,Routes.Profile),
 }
 
@@ -61,8 +61,10 @@ fun BottomNavigationMenu(selectedItem: BottomNavigationItem, navController: NavC
                 .weight(1f)
                 .clickable {
                     navigateTo(navController, item.navDestination)
-                },  colorFilter = if (item == selectedItem) ColorFilter.tint(Color.Black)
-            else ColorFilter.tint(Color.Gray) )
+                },
+                colorFilter = if (item == selectedItem) ColorFilter.tint(Color.Black)
+            else ColorFilter.tint(Color.Gray)
+            )
 
         }
     }
